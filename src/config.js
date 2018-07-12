@@ -3,7 +3,7 @@ let PROT = 18088;
 
 // ORIGIN参数匹配是否是https
 const IS_HTTPS = process.env.IS_HTTPS || 'FALSE'
-let ORIGIN = `http://127.0.0.1:${PROT}`
+let ORIGIN = `http://10.253.21.130:${PROT}`
 if(IS_HTTPS == 'TRUE') ORIGIN = `https://127.0.0.1:${PROT}`
 
 // 系统配置
@@ -13,7 +13,7 @@ export let SYSTEM = {
 
 	// HTTP服务器端口号
 	PROT: PROT,
-	
+
 	// 分页条数
 	PAGESIZE: 50,
 
@@ -31,18 +31,18 @@ export let SYSTEM = {
 
 export let DB = {
 	// 服务器地址
-	HOST: '172.16.50.158',
+	HOST: '127.0.0.1',
 
-	// 数据库端口号     
+	// 数据库端口号
 	PROT: 3306,
 
-	// 数据库用户名              
+	// 数据库用户名
 	USER: 'root',
 
-	// 数据库密码    
-	PASSWORD: '123456',
+	// 数据库密码
+	PASSWORD: 'lxlneo',
 
-	// 数据库名称    
+	// 数据库名称
 	DATABASE: 'web-performance',
 
 	// 默认"api_"
