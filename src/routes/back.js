@@ -23,11 +23,11 @@ router.get('/reportSystem',controllers.dataReport.getSystemPerformDatas);
 router.post('/reportErrorMsg', controllers.dataReport.getErrorMsg)
 
 // 注册用户信息
-router.post('/api/user/userRegister',checkfn, controllers.login.userRegister)
+router.post('/api/user/userRegister',/*checkfn,*/ controllers.login.userRegister)
 // 用户登录
-router.post('/api/user/userLogin',checkfn, controllers.login.userLogin)
+router.post('/api/user/userLogin',/*checkfn,*/ controllers.login.userLogin)
 // 退出登录
-router.post('/api/user/loginOut',checkfn, controllers.login.loginOut)
+router.post('/api/user/loginOut',/*checkfn,*/ controllers.login.loginOut)
 
 //----------------------------SYSTEMS--------------------------------------
 // 新增应用

@@ -22,7 +22,7 @@ class util {
     }
 
     // 错误返回
-    /*  
+    /*
     **  ctx        //ctx
     **  err      //err
     **  code    //错误码
@@ -36,7 +36,7 @@ class util {
         let desc = '未知错误！';
         errCode.forEach((item)=>{
             if(item.code == code){
-                desc = item.desc; 
+                desc = item.desc;
             }
         });
         console.log(err);
@@ -48,6 +48,7 @@ class util {
 
     // 检查接口来源权限
     checkReferer(cxt) {
+        return true;
         let begin = false;
         let url = SYSTEM.ORIGIN
         let header = cxt.request.header
@@ -62,6 +63,7 @@ class util {
 
     // 验证域名来源、
     verSource(ctx) {
+        return true;
         let referer = this.checkReferer(ctx);
         if (!referer) {
             ctx.body = this.result({
@@ -195,7 +197,7 @@ class util {
             }
         }else{
             return size+'KB'
-        }    
+        }
     }
 
     // 遍历某文件下面文件列表信息
@@ -214,7 +216,7 @@ class util {
     }
 
     //Pager分页
-    /*  
+    /*
     **  list        //数据源
     **  page      //当前页数
     **  pageSize    //每页个数
@@ -264,11 +266,11 @@ class util {
         let files = fs.readdirSync(pathImg);
         files.forEach(function (file, index) {
             var curPath = pathImg + "/" + file;
-            if(fs.statSync(curPath).isDirectory()) { // recurse  
-                deleteall(curPath);  
-            } else { // delete file  
-                fs.unlinkSync(curPath);  
-            }  
+            if(fs.statSync(curPath).isDirectory()) { // recurse
+                deleteall(curPath);
+            } else { // delete file
+                fs.unlinkSync(curPath);
+            }
         })
     }
 }
