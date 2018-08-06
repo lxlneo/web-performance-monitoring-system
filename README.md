@@ -126,3 +126,6 @@ pm2启动方式：npm run pm2
 ![](https://github.com/wangweianger/web-performance-monitoring-system/blob/master/demo/05.png "")
 ![](https://github.com/wangweianger/web-performance-monitoring-system/blob/master/demo/06.png "")
 ![](https://github.com/wangweianger/web-performance-monitoring-system/blob/master/demo/07.png "")
+
+### TODOS
+ - 慢页面是通过一个固定的,如果时间大于这个固定值那么久直接插入到数据表 `web_slowpages`中，改为通过配置信息，去查询记录中大于设定阈值的记录
